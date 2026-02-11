@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body com fundo suave */
+body {
+    background: #f5f7fa;
+    color: #0B1443;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header moderno com cor do símbolo */
+header {
+    width: 100%;
+    background: #0B1443; /* azul escuro */
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main centralizado */
+main {
+    max-width: 700px;
+    width: 90%;
+    margin: -40px 0 40px 0;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Seções dentro do main */
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0B1443; /* azul escuro */
+    border-bottom: 2px solid #E31B23; /* linha vermelha vibrante */
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Links estilo moderno com cores do símbolo */
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-link {
+    padding: 12px 25px;
+    background: #0B1443; /* azul escuro */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.button-link:hover {
+    background: #E31B23; /* vermelho vibrante no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Footer moderno */
+footer {
+    text-align: center;
+    background: #0B1443; /* azul escuro */
+    color: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section h3 {
+        font-size: 1.3rem;
+    }
+    section p {
+        font-size: 0.95rem;
+    }
+    .button-link {
+        width: 100%;
+        text-align: center;
+    }
+    main {
+        padding: 20px;
+    }
+}
