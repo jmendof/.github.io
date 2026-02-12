@@ -17,26 +17,62 @@ body {
     align-items: center;
 }
 
-/* Header moderno com cor do símbolo */
+/* HEADER NOVO ESTILO HERO */
 header {
     width: 100%;
-    background: #0B1443; /* azul escuro */
+    background: linear-gradient(135deg, #0B1443 0%, #111C5A 100%);
     color: #FFFFFF;
-    padding: 40px 20px;
+    padding: 60px 20px 40px 20px;
     text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+/* Efeito de luz suave no fundo */
+header::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(227, 27, 35, 0.15);
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
+    filter: blur(80px);
 }
 
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+/* Container do hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título estilizado */
+.logo-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-title span {
+    color: #E31B23;
+    position: relative;
+}
+
+/* Linha moderna abaixo do título */
+.title-divider {
+    width: 80px;
+    height: 4px;
+    background: #E31B23;
+    margin: 15px auto 20px auto;
+    border-radius: 10px;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 30px;
 }
 
 /* Main centralizado */
@@ -51,6 +87,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-top: 0%;
 }
 
 /* Seções dentro do main */
@@ -93,19 +130,43 @@ section p {
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Footer moderno */
 footer {
-    text-align: center;
-    background: #0B1443; /* azul escuro */
+    background: #0B1443;
     color: #FFFFFF;
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    font-size: 0.95rem;
-    width: 90%;
-    max-width: 350px;
-    margin-bottom: 30px;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
+}
+
+/* Cores ao passar o mouse */
+.social-icons a:nth-child(1):hover { color: #E1306C; } /* Instagram */
+.social-icons a:nth-child(2):hover { color: #1877F2; } /* Facebook */
+.social-icons a:nth-child(3):hover { color: #FF0000; } /* YouTube */
+.social-icons a:nth-child(4):hover { color: #25D366; } /* WhatsApp */
+
 
 /* Responsividade */
 @media (max-width: 600px) {
@@ -128,4 +189,30 @@ footer {
     main {
         padding: 20px;
     }
+}
+/* MENU */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    background: #E31B23;
+    transform: translateY(-2px);
 }
